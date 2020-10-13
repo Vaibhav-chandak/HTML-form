@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: #fdb856;
+    background: linear-gradient(255deg, rgba(253, 184, 86, 1) 0, rgba(255, 248, 114, 1) 23%, rgba(65, 221, 253, 1) 100%)
+}
+
+.rowContact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    position: relative;
+    z-index: 1;
+    text-align: center
+}
+
+.rowContact:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: -5000px;
+    height: 100%;
+    width: 15000px;
+    z-index: -1;
+    background: inherit
+}
+
+.rowContact:first-child {
+    padding: 40px 30px
+}
+
+.rowContact span {
+    position: relative;
+    display: inline-block;
+    margin: 30px 10px
+}
+
+.basic-slide {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #377d6a;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 70px;
+    transition: all .3s ease-in-out
+}
+
+.basic-slide::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300
+}
+
+.basic-slide+label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, .4);
+    background: #7ab893;
+    transition: all .3s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px
+}
+
+.basic-slide:active, .basic-slide:focus {
+    color: #377d6a;
+    text-indent: 0;
+    background: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.basic-slide:active::-webkit-input-placeholder, .basic-slide:focus::-webkit-input-placeholder {
+    color: #aaa
+}
+
+.basic-slide:active+label, .basic-slide:focus+label {
+    transform: translateX(-100%)
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0)
+    }
+    20% {
+        transform: rotate(116deg)
+    }
+    40% {
+        transform: rotate(60deg)
+    }
+    60% {
+        transform: rotate(98deg)
+    }
+    80% {
+        transform: rotate(76deg)
+    }
+    100% {
+        transform: rotate(82deg)
+    }
+}
+
+@keyframes swing-back {
+    0% {
+        transform: rotate(82deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
